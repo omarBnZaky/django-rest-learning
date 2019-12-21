@@ -22,7 +22,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     #Rest api urls
-    path('api/blog/', include('blogs.api.urls','blog_api'))
+
+    
+    path('api/blog/', include('blogs.api.urls','blog_api')),
+    path('api/user/', include('accounts.api.urls','user_api'))
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
